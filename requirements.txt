@@ -1,5 +1,4 @@
 streamlit
 pandas
-python-Levenshtein==0.21.1
 thefuzz
 re
