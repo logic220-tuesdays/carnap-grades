@@ -6,7 +6,7 @@ import re
 
 st.title("CSV Processor")
 
-st.write("Download grades from Carnap.io using the 'per assignment' option")
+st.write("Download grades from Carnap.io using the 'per assignment' option. (Make sure there are no repeated names in Carnap!)")
 st.write("Export grades from Brightspace selecting only the following options:")
 st.markdown("""
 - Export grade items for all users
@@ -123,7 +123,7 @@ min_value=0,max_value=(len(TA_sections) + 1))
 
     if st.button("Process"):
         csv = df2.to_csv(index=False)
-        st.write("Don't forget to double-check the students without grades (the app might have missed something)")
+        st.write("Don't forget to double-check the students without grades (the app might have missed something, like the stuff mentioned [here](https://github.com/logic220-tuesdays/carnap-grades/issues))")
         st.download_button(
             label="Download CSV",
             data=csv,
